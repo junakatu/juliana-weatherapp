@@ -1,0 +1,99 @@
+body {
+  padding: 4em;
+  margin: 3em;
+  border-radius: 2%;
+  font-family: "Source Code Pro", monospace;
+  min-width: 100%;
+}
+
+h2 {
+  line-height: 1.5;
+}
+
+h3 {
+  line-height: 1.5;
+}
+
+ul {
+  font-size: 30px;
+  position: relative;
+  top: -150px;
+  left: 650px;
+  list-style: none;
+  line-height: 2;
+}
+
+.border {
+  position: relative;
+  top: -40px;
+  display: inline;
+  background-color: transparent;
+}
+
+.col {
+  font-size: 45px;
+  text-align: center;
+  position: relative;
+  top: 25px;
+}
+
+.container {
+  background: #ecd2d1;
+  width: 60%;
+}
+
+.current-temperature {
+  font-size: 110px;
+  display: inline;
+}
+
+.current-weather {
+  position: relative;
+  bottom: -46px;
+  right: -6%;
+}
+
+.precipitation {
+  position: relative;
+  right: 5px;
+}
+
+.row {
+  position: relative;
+  right: -2px;
+}
+
+.sunset {
+  position: relative;
+  right: 13px;
+}
+.temperature {
+  list-style: none;
+}
+
+.weather {
+  position: relative;
+  right: -95px;
+  top: 10px;
+  font-size: 50px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.weather-icon {
+  font-size: 115px;
+  list-style: none;
+  display: inline;
+}
+
+.weather-font {
+  font-size: 115px;
+  list-style: none;
+  display: inline;
+}
+.week-forecast {
+  position: relative;
+  top: -100px;
+  right: -10px;
+  font-size: 43px;
+}
