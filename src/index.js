@@ -20,15 +20,11 @@ currentDate.innerHTML = formattedDate;
 
 
 function displayData(response){
-let h2 = document.querySelector("h2");
-h2.innerHTML = `${response.data.name}`;
-let tempCelcius= Math.round(response.data.main.temp);
-let cityTemp = document.querySelector(".current-temperature");
-cityTemp.innerHTML = `${tempCelcius}`;
-let weatherDescription = document.querySelector(".weather-description");
-weatherDescription.innerHTML= response.data.weather[0].main;
-
-
+document.querySelector("#city").innerHTML=response.data.name;
+document.querySelector(".current-temperature").innerHTML=Math.round(response.data.main.temp);
+document.querySelector(".weather-description").innerHTML = response.data.weather[0].main;
+document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
+document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)}m/s`;
 }
 function search(city){
 let apiKey = "24e8153e9c8eb48f21299cbc6a60616a";
@@ -48,29 +44,23 @@ function displayCity(event) {
 let searchCityInput = document.querySelector("#search-city");
 searchCityInput.addEventListener("submit", displayCity);
 
-function getCurrentPosition(event) {
-  event.preventDefault(); 
-  navigator.geolocation.getCurrentPosition(currentPosition);
-  let currentLocation = document.querySelector("h2");
-  currentLocation.innerHTML =  response.data.name;
-  let tempCelcius= Math.round(response.data.main.temp);
-let cityTemp = document.querySelector(".current-temperature");
-cityTemp.innerHTML = `${tempCelcius}`;
-let weatherDescription = document.querySelector(".weather-description");
-weatherDescription.innerHTML= response.data.weather[0].main;
-  
-}
-
 function currentPosition(position) {
   console.log(position);
   let apiKey = "24e8153e9c8eb48f21299cbc6a60616a";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(url).then(getCurrentPosition);
 }
+
+function getCurrentPosition(event) {
+ event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentPosition); 
+  
+}
+
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentPosition);
 
-search("Kyoto");
+search("Paris");

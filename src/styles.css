@@ -3,11 +3,11 @@ body {
   margin: 3em;
   border-radius: 2%;
   font-family: "Source Code Pro", monospace;
-  min-width: 100%;
 }
 
 h2 {
   line-height: 1.5;
+  font-size: 56px;
 }
 
 h3 {
@@ -23,23 +23,58 @@ ul {
   line-height: 2;
 }
 
-.border {
+footer {
   position: relative;
-  top: -40px;
-  display: inline;
-  background-color: transparent;
+  bottom: -80px;
 }
 
+.border {
+  position: relative;
+  top: -62px;
+  display: inline;
+  background-color: transparent;
+  border-color: none;
+}
+
+.city-input {
+  border: none;
+  background-color: rgb(247, 241, 241);
+  border-radius: 8px;
+  width: 245px;
+  padding: 10px;
+}
+
+.submit-form {
+  border: none;
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 25px;
+  width: 40px;
+  padding: 2px;
+}
+
+.current-city {
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 25px;
+  width: 40px;
+  padding: 2px;
+}
 .col {
-  font-size: 45px;
+  font-size: 60px;
   text-align: center;
   position: relative;
-  top: 25px;
+  top: 2px;
 }
 
 .container {
   background: #ecd2d1;
-  width: 60%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 8px;
 }
 
 .current-temperature {
@@ -53,17 +88,12 @@ ul {
   right: -6%;
 }
 
-.precipitation {
-  position: relative;
-  right: 5px;
-}
-
 .row {
   position: relative;
   right: -2px;
 }
 
-.sunset {
+.weather-condition {
   position: relative;
   right: 13px;
 }
@@ -81,7 +111,7 @@ ul {
 }
 
 .weather-icon {
-  font-size: 115px;
+  font-size: 100px;
   list-style: none;
   display: inline;
 }
@@ -95,5 +125,5 @@ ul {
   position: relative;
   top: -100px;
   right: -10px;
-  font-size: 43px;
+  font-size: 30px;
 }

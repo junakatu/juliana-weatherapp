@@ -21,29 +21,29 @@
 </head>
 
 <body>
-    <div class="container shadow-sm p-5 m-3">
+    <div class="container shadow-sm">
         <form id="search-city">
-            <input type="text" placeholder="Search city" autofocus="on" id="search-text-input">
-            <input type="submit" value="🔎" id="submit-form">
-            <input type="button" value="🧭" id="current-location">
+            <input type="text" placeholder="Search city" autofocus="on" class= "city-input" id="search-text-input">
+            <input type="submit" value="🔎" class="submit-form" id="submit-form">
+            <input type="button" value="🧭" class="current-city" id="current-location">
 
         </form>
-        <h2>
-            São Paulo
+        <h2 id="city">
+            
         </h2>
         <h3 class="date" id="current-date">
             February, 11th, 2021 | 14:47
         </h3>
         <div class="current-weather">
             <h3 class="weather-description">
-                Rainny
+                
             </h3>
 
             <p class="weather-font">
                 <i class="fas fa-cloud-rain"></i>
             </p>
             <span class="current-temperature">
-                17
+                
             </span>
             <span class="units">
                 <a href="#" id="celcius-link">
@@ -55,19 +55,14 @@
             </span>
 
         </div>
-        <ul>
-            <li class="sunrise">
-                <img src="https://img.icons8.com/metro/26/000000/sunrise.png" />
-                Sunrise 5:45
+        <ul class="weather-condition" >
+            <li id="humidity">
+                
             </li>
-            <li class="sunset">
-                <img src="https://img.icons8.com/ios-filled/50/000000/sunset.png" />
-                Sunset 18:54
+            <li id="wind">
+                
             </li>
-            <li class="precipitation">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/heavy-rain.png" />
-                Precipitation 90%
-            </li>
+            
         </ul>
 
         <h3 class="border rounded-1 p-4 m-5 mt-0 w-25 text-dark">
@@ -122,11 +117,12 @@
 
             </div>
 
-            <footer>
-                <a href="https://github.com/junakatu/juliana-weatherapp">Open Source Code</a> by Juliana
-            </footer>
-
+                       
         </div>
+
+        <footer>
+            <a href="https://github.com/junakatu/juliana-weatherapp" target="_blank">Open Source Code</a> by Juliana
+        </footer>
 
         <script src="src/index.js"></script>
 </body>
