@@ -36,6 +36,8 @@ iconElement.setAttribute("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
 iconElement.setAttribute("alt", response.data.weather[0].description);
+
+celciusTemperature = response.data.main.temp;
   
 }
 
@@ -72,8 +74,33 @@ function getCurrentPosition(event) {
   
 }
 
+function  displayFahrenheitTemperature(event){
+  event.preventDefault();
+  celciusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature= (celciusTemperature*9)/5+32;
+  let currentTemperature = document.querySelector(".current-temperature");
+  currentTemperature.innerHTML= Math.round(fahrenheitTemperature);
+
+}
+
+function  displayCelciusTemperature(event){
+  event.preventDefault();
+  celciusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let currentTemperature = document.querySelector(".current-temperature");
+  currentTemperature.innerHTML= Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentPosition);
+
+let fahrenheitLink= document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink= document.querySelector("#celcius-link")
+celciusLink.addEventListener("click", displayCelciusTemperature);
 
 search("Paris");
