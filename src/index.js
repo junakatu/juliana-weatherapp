@@ -25,7 +25,14 @@ document.querySelector(".current-temperature").innerHTML=Math.round(response.dat
 document.querySelector(".weather-description").innerHTML = response.data.weather[0].main;
 document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
 document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)}m/s`;
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+iconElement.setAttribute("alt", response.data.weather[0].description);
+  
 }
+
 function search(city){
 let apiKey = "24e8153e9c8eb48f21299cbc6a60616a";
   let units = "metric";
