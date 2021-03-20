@@ -75,12 +75,11 @@ footer {
   padding: 2px;
 }
 .col {
-  font-size: 60px;
+  font-size: 30px;
   text-align: center;
   position: relative;
   top: 2px;
 }
-
 .container {
   background: #ecd2d1;
   max-width: 100%;
@@ -103,14 +102,12 @@ footer {
 .row {
   position: relative;
   right: -2px;
+  font-size: 30px;
 }
 
 .weather-condition {
   position: relative;
   right: 13px;
-}
-.temperature {
-  list-style: none;
 }
 
 .weather {
@@ -120,12 +117,6 @@ footer {
   font-size: 50px;
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-.weather-icon {
-  font-size: 100px;
-  list-style: none;
-  display: inline;
 }
 
 .weather-font {
