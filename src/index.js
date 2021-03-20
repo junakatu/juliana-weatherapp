@@ -98,18 +98,19 @@ function displayCity(event) {
 let searchCityInput = document.querySelector("#search-city");
 searchCityInput.addEventListener("submit", displayCity);
 
-function currentPosition(position) {
+function searchLocation(position) {
   console.log(position);
   let apiKey = "24e8153e9c8eb48f21299cbc6a60616a";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(url).then(getCurrentPosition);
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(url).then(displayData);
+
+  url= `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(url).then(displayForecast);
 }
 
 function getCurrentPosition(event) {
  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(currentPosition); 
+  navigator.geolocation.getCurrentPosition(searchLocation); 
   
 }
 
