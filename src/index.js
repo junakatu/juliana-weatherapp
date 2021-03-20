@@ -42,7 +42,7 @@ document.querySelector("#city").innerHTML=response.data.name;
 document.querySelector(".current-temperature").innerHTML=Math.round(response.data.main.temp);
 document.querySelector(".weather-description").innerHTML = response.data.weather[0].main;
 document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity}%`;
-document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)}m/s`;
+document.querySelector("#wind").innerHTML = `Wind: ${Math.round(response.data.wind.speed)}km/h`;
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -58,7 +58,7 @@ function displayForecast(response){
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for(let index = 0; index<6; index ++){
+  for(let index = 0; index<5; index ++){
     forecast = response.data.list[index];
     forecastElement.innerHTML +=
   `<div class="col">

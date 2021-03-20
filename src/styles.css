@@ -3,11 +3,13 @@ body {
   margin: 3em;
   border-radius: 2%;
   font-family: "Source Code Pro", monospace;
+  background-image: url(../img/sky.jpg);
 }
 
 h2 {
   line-height: 1.5;
   font-size: 56px;
+  margin-bottom: 0%;
 }
 
 h3 {
@@ -37,12 +39,12 @@ footer {
 .active :hover {
   text-decoration: none;
 }
-.border {
+
+.hour-forecast {
   position: relative;
   top: -62px;
-  display: inline;
-  background-color: transparent;
-  border-color: none;
+  left: 200px;
+  text-decoration: underline;
 }
 
 .city-input {
@@ -82,7 +84,7 @@ footer {
 }
 .container {
   background: #ecd2d1;
-  max-width: 100%;
+  max-width: 60%;
   margin: 0 auto;
   padding: 50px;
   border-radius: 8px;
@@ -91,12 +93,12 @@ footer {
 .current-temperature {
   font-size: 110px;
   display: inline;
+  position: relative;
+  left: -52px;
 }
 
 .current-weather {
-  position: relative;
-  bottom: -46px;
-  right: -6%;
+  margin-left: 0%;
 }
 
 .row {
@@ -105,9 +107,11 @@ footer {
   font-size: 30px;
 }
 
-.weather-condition {
+.units {
   position: relative;
-  right: 13px;
+  left: -50px;
+  font-size: 20px;
+  top: -50px;
 }
 
 .weather {
@@ -118,11 +122,20 @@ footer {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+.weather-condition {
+  position: relative;
+  left: 350px;
+  font-size: 25px;
+}
 
+.weather-description {
+  margin-top: 6%;
+}
 .weather-font {
   font-size: 115px;
   list-style: none;
   display: inline;
+  margin-right: 0%;
 }
 .week-forecast {
   position: relative;
