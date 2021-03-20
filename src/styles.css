@@ -3,7 +3,8 @@ body {
   margin: 3em;
   border-radius: 2%;
   font-family: "Source Code Pro", monospace;
-  background-image: url(../img/sky.jpg);
+  background-image: url(..//img/sky.jpg);
+  background-size: cover;
 }
 
 h2 {
@@ -83,7 +84,7 @@ footer {
   top: 2px;
 }
 .container {
-  background: #ecd2d1;
+  background: rgba(255, 255, 255, 0.2);
   max-width: 60%;
   margin: 0 auto;
   padding: 50px;
