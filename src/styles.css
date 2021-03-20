@@ -133,7 +133,9 @@ footer {
 }
 
 .weather-description {
-  margin-top: 6%;
+  margin-top: 50px;
+  position: relative;
+  left: 100px;
 }
 .weather-font {
   font-size: 115px;
